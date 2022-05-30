@@ -1,6 +1,15 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Actionicons from '../icons/action-icons'
 export default function Datagrid() {
+    const [a,seta]=useState([])
+
+    const boot=()=>{
+        fetch("https://jsonplaceholder.typicode.com/users")
+        .then(d=>d.json())
+        .then(d=>seta(d))
+    }
+
+    useEffect(boot,[])
     return (
         <div className='bg-white m-2 p-3 rounded-md'>
             <div className='flex items-center justify-between px-5'>
@@ -19,14 +28,14 @@ export default function Datagrid() {
                         <td className='text-light text-sm text-left'>Action</td>
                         <td className='text-light text-sm text-left'>Status</td>
                     </tr>
-                    {[1, 2, 3, 4, 5].map(x => <tr key={x}>
+                    {a.map(x => <tr key={x.id}>
                         <td className='text-left'>ICU</td>
                         <td className='flex gap-2 items-center'>
                             <img src="/avatar.png" />
-                            <span>Maria Anders</span>
+                            <span>{x.name}</span>
                         </td>
-                        <td>Male</td>
-                        <td>Maria Anders</td>
+                        <td>{x.username}</td>
+                        <td>{x.company.name}</td>
                         <td>
                             <Actionicons />
                         </td>
