@@ -44,7 +44,7 @@ export default function Sidebar() {
           </ul>
         </div>
         <div className='mt-5'>
-          <button className='p-2 bg-[#8146FF] rounded-md text-white'>+ register Patients</button>
+          <button className='p-2 px-5 bg-[#8146FF] rounded-md text-white'>+ register Patients</button>
         </div>
       </div>
       <div className=''>
