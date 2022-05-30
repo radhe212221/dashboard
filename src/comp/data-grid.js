@@ -10,14 +10,14 @@ export default function Datagrid() {
                 </div>
             </div>
             <div className='mt-5'>
-                <table className='text-gray-500 w-full ' cellPadding={10}>
+                <table className='text-gray-500 w-full text-sm' cellPadding={10}>
                     <tr>
-                        <th className='text-left'>Department Name</th>
-                        <th className='text-left'>Doctor</th>
-                        <th className='text-left'>Gender</th>
-                        <th className='text-left'>Head Of Department</th>
-                        <th className='text-left'>Action</th>
-                        <th className='text-left'>Status</th>
+                        <td className='text-light text-sm text-left'>Department Name</td>
+                        <td className='text-light text-sm text-left'>Doctor</td>
+                        <td className='text-light text-sm text-left'>Gender</td>
+                        <td className='text-light text-sm text-left'>Head Of Department</td>
+                        <td className='text-light text-sm text-left'>Action</td>
+                        <td className='text-light text-sm text-left'>Status</td>
                     </tr>
                     {[1, 2, 3, 4, 5].map(x => <tr key={x}>
                         <td className='text-left'>ICU</td>
@@ -31,7 +31,7 @@ export default function Datagrid() {
                             <Actionicons />
                         </td>
                         <td>
-                            <span>active</span>
+                            <span className='bg-green-50 text-green-400 p-2 text-[10px] uppercase'>active</span>
                         </td>
                     </tr>)}
                 </table>
