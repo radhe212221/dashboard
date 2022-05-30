@@ -7,11 +7,11 @@ export default function Topbar() {
   return (
     <div className='bg-white py-2 fixed z-20 top-0 right-0 flex w-[84%] justify-between px-[2%] shadow-md'>
       <div className=''>
-        <div className='flex p-2 bg-white items-center gap-2 border border-gray-600 rounded-md'>
+        <div className='flex px-2 bg-white items-center gap-2 border border-gray-100 rounded-md'>
           <div>
             <SearchIcon />
           </div>
-          <div><input placeholder='Search by patients...' /></div>
+          <div><input className='p-2 outline-none' placeholder='Search by patients...' /></div>
         </div>
       </div>
       <div className='flex gap-10'>
